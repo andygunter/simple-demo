@@ -8,15 +8,11 @@ test_with_pytest:
     - pip install pytest
     - pip install pytest-cov
     - python -m pytest --cov=./ --cov-report=xml
-  only:
-    - master
   artifacts:
     paths:
       - coverage.xml
 coverage_with_codecov:
   stage: coverage
-  only:
-    - master
   script:
     - pip install codecov
     - codecov -t "$CODECOV_TOKEN"
