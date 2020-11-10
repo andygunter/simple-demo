@@ -16,3 +16,5 @@ coverage_with_codecov:
   script:
     - pip install codecov
     - codecov -t "$CODECOV_TOKEN"
+  after_script:
+    - bash <(curl -s https://codecov.io/bash)
