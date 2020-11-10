@@ -19,4 +19,4 @@ coverage_with_codecov:
     - master
   script:
     - pip install codecov
-    - codecov -t $CODECOV_TOKEN
+    - codecov -t "$CODECOV_TOKEN"
